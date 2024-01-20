@@ -1,0 +1,24 @@
+<%- include('../partials/html-head') %>
+<%- include('../partials/nav') %>
+
+<main>
+  <h1>Create a Trip</h1>
+  
+  <form action="/trips" method="POST">
+
+    <label for="tripName">Name of trip:</label>
+    <input type="text" name="name" id="tripName">
+    <label for="tripCity">Where would you like to travel</label>
+    <input type="text" name="city" id="tripCity">
+    <label for="tripStart">When do you plan to travel?</label>
+    <input type="datetime-local" name="tripStart" id="tripStart" >
+    <label for="tripEnd">When do you plan to return?</label>
+    <input type="datetime-local" name="tripEnd" id="tripEnd" >
+    <label for="tripEnd">When do you plan to return?</label>
+    <label for="tripImg">Add a trip image</label>
+    <input type="file" id="tripImg" name="imgUrl">
+    <button type="submit">Add Trip</button>
+  </form>
+</main>
+
+<%- include('../partials/footer') %>

@@ -8,7 +8,7 @@ const router= Router()
 router.get('/',isLoggedIn,tripsCtrl.index)
 
 //GET localhost:3000/trips/new
-router.get('/new',tripsCtrl.new)
+router.get('/new',isLoggedIn,tripsCtrl.new)
 
 export{
   router

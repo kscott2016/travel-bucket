@@ -5,15 +5,14 @@
   <div class="index-welcome-banner">
     <h2>Welcome <%= user.profile.login %></h2>
     <div><%= user.profile.name %></div>
-    <a href="/new">Create a trip</a>
+    <a href="/trips/new">Create a trip</a>
   </div>
   <% if (trips.length===0) { %>
   <h3>No trips planed!</h3>
-   
   <% } else { %>
     <ul>
       <% trips.forEach(trip => { %>
-       <div class="tripCard">
+      <div class="tripCard">
         <h3><%= trip.name %>
           <p><% trip.city %></p>
         </div>
@@ -21,7 +20,6 @@
     </ul>
 
   <% } %>
-   
   </main>
 
 <%- include('../partials/footer') %>

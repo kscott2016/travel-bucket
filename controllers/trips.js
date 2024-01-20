@@ -17,6 +17,10 @@ function index(req,res){
 
 function newTrip(req,res){
 
+  res.render('trips/new',{
+    title:"Add Trip"
+  })
+
 }
 
 
