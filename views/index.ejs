@@ -1,7 +1,7 @@
 <%- include('./partials/html-head') %>
 <%- include('./partials/nav') %>
 
-<main>
+<!-- <main>
   <h1>hello, <%= user ? user.profile.name : "friend" %></h1>
   <% if (user?.profile.avatar) { %>
     <div>
@@ -11,6 +11,43 @@
       />
     </div>
   <% } %>
+</main> -->
+<main>
+  <div class="welcomeArea">
+    <div class="videoContainer">
+      <iframe src="https://www.youtube.com/embed/JXMWOmuR1hU?si=Qfa0q7iMgv3B1E0R&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay=1; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen id="vacationVideo"></iframe>
+    </div>
+    <div class="welcomeMessage">
+      <span>Plan your escape</span>
+      <h1>Travel Bucket</h1>
+      <p>Design the travel plans of your dreams and share with others!</p>
+      <div>
+       <h2 class="welcomeHeader">Welcome <%= user ? `back, ${user.profile.name}`
+         : "back, travel dreamer" %></h2>
+      </div>
+      <% if (user) { %>
+        <a href="/trips" class="right">View trips</a>
+      <% } else { %>
+        <div 
+          id="g_id_onload"
+          data-client_id="<%= googleClientID %>"
+          data-login_uri="/auth/google"
+          data-auto_prompt="false"
+          data-prompt_parent_id="g_id_onload"
+        ></div>
+        <div 
+          class="g_id_signin right"
+          data-type="standard"
+          data-size="large"
+          data-theme="outline"
+          data-text="sign_in_with"
+          data-shape="rectangular"
+          data-logo_alignment="left"
+        ></div>
+        <% } %>
+    </div>
+  </div>
+
 </main>
 
 <%- include('./partials/footer') %>

@@ -10,7 +10,7 @@ import methodOverride from 'method-override'
 import passport from 'passport'
 
 // import custom middleware
-import { passDataToView } from './middleware/middleware.js'
+import { passDataToView } from './public/middleware/middleware.js'
 
 // connect to MongoDB with mongoose
 import './config/database.js'
