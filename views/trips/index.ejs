@@ -1,0 +1,12 @@
+<%- include('./partials/html-head') %>
+<%- include('./partials/nav') %>
+
+<main>
+  <div class="index-welcome-banner">
+    <h2>Welcome <%= user.profile.login %></h2>
+    <div>"<%= user.profile.name %></div>
+    <a href="/new">Create a trip</a>
+  </div>
+  </main>
+
+<%- include('./partials/footer') %>

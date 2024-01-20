@@ -15,7 +15,9 @@
 <main>
   <div class="welcomeArea">
     <div class="videoContainer">
-      <iframe src="https://www.youtube.com/embed/JXMWOmuR1hU?si=Qfa0q7iMgv3B1E0R&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay=1; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen id="vacationVideo"></iframe>
+      <iframe 
+      src="https://www.youtube.com/embed/JXMWOmuR1hU?autoplay=1&mute=1&loop=1&controls=0"frameborder="0"
+      allowfullscreen id="vacationVideo"></iframe>
     </div>
     <div class="welcomeMessage">
       <span>Plan your escape</span>
@@ -26,7 +28,7 @@
          : "back, travel dreamer" %></h2>
       </div>
       <% if (user) { %>
-        <a href="/trips" class="right">View trips</a>
+        <a href="/trips">View trips</a>
       <% } else { %>
         <div 
           id="g_id_onload"
@@ -36,7 +38,7 @@
           data-prompt_parent_id="g_id_onload"
         ></div>
         <div 
-          class="g_id_signin right"
+          class="g_id_signin"
           data-type="standard"
           data-size="large"
           data-theme="outline"
