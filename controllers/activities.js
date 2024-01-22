@@ -20,6 +20,7 @@ function newActivity(req,res){
 function create(req,res){
   console.log(`Adding activity to ${req.params.tripId}`)
   Trip.findById(req.params.tripId)
+  .populate('activities')
   .then(trip=>{
     Activity.create(req.body)
     .then(activity=>{
