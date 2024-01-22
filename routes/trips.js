@@ -17,7 +17,7 @@ router.post('/',isLoggedIn,tripsCtrl.create)
 router.get('/:tripId',isLoggedIn,tripsCtrl.show)
 
 //GET localhost:3000/trips/:tripId/edit
-router.get('/:tripId.edit',isLoggedIn,tripsCtrl.edit)
+router.get('/:tripId/edit',isLoggedIn,tripsCtrl.edit)
 
 //PUT localhost:3000/trips/:tripId
 router.put('/:tripId',isLoggedIn,tripsCtrl.update)

@@ -6,6 +6,7 @@
     <p>City: <%= trip.city %> </p>
     <p>Leave Date: <%= trip.tripStart %></p>
     <p>Return Date: <%= trip.tripEnd %></p>
+    <a href="/trips/<%= trip._id %>/edit">Edit this trip</a>
     <img src="<%= trip.imgUrl %>"/>
     <h2>Activities</h2>
     <% if (!trip.Activities) { %>

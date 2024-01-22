@@ -62,14 +62,29 @@ function show(req,res){
 
 function edit (req,res){
 
-  res.render('trips/new',{
-    title:"Add Trip",
-    defaultImg:"https://hgtvhome.sndimg.com/content/dam/images/hgtv/fullset/2022/3/24/1/shutterstock_palm-full-coconuts-on-maldivian-beach575497081.jpg.rend.hgtvcom.1280.853.suffix/1648128375983.jpeg"
+  Trip.findById(req.params.tripId)
+  .then(trip=>{
+
+    res.render('trips/edit',{
+      trip:trip,
+      title: `Edit ${req.params.name}`
+    })
   })
+  
 
 }
 
 function update (req, res){
+
+  Trip.findByIdAndUpdate(req.params.tripId,req.body)
+  .then(trip=>{
+
+    res.redirect(`/trips/${trip._id}`)
+  })
+  .catch(err=>{
+    console.log(err)
+    res.redirect(`/trips/${trip._id}`)
+  })
 
 }
 
