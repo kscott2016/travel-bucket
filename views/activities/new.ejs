@@ -4,33 +4,28 @@
 <main id="activitiesForm">
   <% if (user) { %>
   <h1>Add an activity</h1>
-    <form id="activity-form" action="/activity" method="POST">
+    <form id="activity-form" action="/activities" method="POST">
       <div class="formRow">
         <div class="formItem">
-          <label for="tripName">Name of trip:</label>
-          <input type="text" name="name" id="tripName">
+          <label for="activityName">Name of activity:</label>
+          <input type="text" name="name" id="activityName">
         </div>
         <div class="formItem">
-          <label for="tripCity">Where would you like to travel</label>
-          <input type="text" name="city" id="tripCity">
+          <label for="activityVenue">When do you plan to travel?</label>
+          <input type="text" name="activityVenue" id="venue" >
         </div>
-      </div>
-      <div class="formRow">
-        <div class="formItem">
-          <label for="tripStart">When do you plan to travel?</label>
-          <input type="datetime-local" name="tripStart" id="tripStart" >
-      </div>
-      <div class="formItem">
-          <label for="tripEnd">When do you plan to return?</label>
-          <input type="datetime-local" name="tripEnd" id="tripEnd" >
       </div>
       <div class="formRow">
         <div class="formItem">
-          <label for="tripImg">Add a trip image</label>
-          <input type="text" id="tripImg" name="imgUrl" value="<%= defaultImg %>">
+          <label for="activityType">What type of activity is this?</label>
+          <select name="type" id="activityType">
+            <option value="tourism">Tourism</option>
+            <option value="event">Event</option>
+            <option value="restaurant">Restaurant</option>
+            <option value="adventure">Adventure</option>
+          </select>
         </div>
-      </div>
-      <button type="submit">Add Trip</button>
+      <button type="submit">Add Activity</button>
     </form>
   <% } %>
 </main>
