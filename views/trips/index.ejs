@@ -15,6 +15,7 @@
       <div class="tripCard">
           <h3><%= trip.name %>|<%= trip.city %></h3>
             <div class="status-change">
+              <a href="/trips/<%= trip._id %>">View trip details</a>
               <form action="/trips/<%= trip._id %>?_method=DELETE" method="POST">
                 <button type="submit">Delete this trip
                 </button>

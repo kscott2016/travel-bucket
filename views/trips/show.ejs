@@ -17,8 +17,13 @@
      <li><%= activity.name %></li>
     <% }) %>
     </ul>
-    <% }%>
 
+    <form action="/trips/<%= trip._id %>?_method=DELETE" method="POST">
+    <% }%>
+    <form action="/trips/<%= trip._id %>?_method=DELETE" method="POST">
+      <button type="submit">Delete this trip
+      </button>
+    </form>
   </main>
 
 <%- include('../partials/footer') %>
