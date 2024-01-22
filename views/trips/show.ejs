@@ -11,10 +11,12 @@
     <h2>Activities</h2>
     <% if (!trip.Activities) { %>
      <p>No activities planned! Start adding some!</p>
+     <a href="/<%= trip._id  %>/activities/new">Add activity</a>
    <% } else { %>
     <ul>
     <% trip.activities.forEach(activity => { %>
      <li><%= activity.name %></li>
+     <a href="/activities/trip.activities._id">Activity Details</a>
     <% }) %>
     </ul>
 
