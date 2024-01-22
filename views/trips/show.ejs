@@ -10,14 +10,15 @@
     <img src="<%= trip.imgUrl %>"/>
     <h2>Activities</h2>
     <% if (!trip.activities.length) { %>
-     <p>No activities planned! Start adding some!</p>
-     <a href="/trips/<%= trip._id %>/activities/new">Add activity</a>
-    <ul>
-    <% trip.activities.forEach(activity => { %>
-     <li><%= activity.name %></li>
-     <a href="/activities/">Activity Details</a>
-    <% }) %>
-    </ul>
+      <p>No activities planned! Start adding some!</p>
+      <a href="/trips/<%= trip._id %>/activities/new">Add activity</a>
+    <% } else { %>
+      <ul>
+      <% trip.activities.forEach(activity => { %>
+      <li><%= activity.name %></li>
+      <a href="/activities/">Activity Details</a>
+      <% }) %>
+      </ul>
     <% }%>
     <form action="/trips/<%= trip._id %>?_method=DELETE" method="POST">
       <button type="submit">Delete this trip

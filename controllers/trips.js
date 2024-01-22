@@ -64,10 +64,10 @@ function edit (req,res){
 
   Trip.findById(req.params.tripId)
   .then(trip=>{
-
+console.log(`Trip: ${trip.name}`)
     res.render('trips/edit',{
       trip:trip,
-      title: `Edit ${req.params.name}`
+      title: `Edit ${trip.name}`
     })
   })
 }
