@@ -1,5 +1,6 @@
 import { Router } from 'express'
 import * as tripsCtrl from '../controllers/trips.js'
+import * as activitiesCtrl from '../controllers/activities.js'
 import { isLoggedIn } from "../middleware/middleware.js"
 
 const router= Router()
@@ -15,6 +16,9 @@ router.post('/',isLoggedIn,tripsCtrl.create)
 
 //GET localhost:3000/trips/:tripId/edit
 router.get('/:tripId',isLoggedIn,tripsCtrl.show)
+
+//GET /trips/:tripId/activities/new
+router.get('/:tripId/activities/new',isLoggedIn,activitiesCtrl.new)
 
 //GET localhost:3000/trips/:tripId/edit
 router.get('/:tripId/edit',isLoggedIn,tripsCtrl.edit)

@@ -9,6 +9,9 @@ function isLoggedIn(req, res, next) {
   res.redirect('/')
 }
 
+//Need to create isAdmin function to check to see if user is admin of the trip
+//could try status/access codes too
+
 export {
   passDataToView,
   isLoggedIn,

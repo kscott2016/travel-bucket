@@ -3,8 +3,8 @@
 
 <main id="activitiesForm">
   <% if (user) { %>
-  <h1>Add an activity</h1>
-    <form id="activity-form" action="/activities" method="POST">
+  <h1> <%= title %></h1>
+    <form id="activity-form" action="/<%= trip._id %>/activities/new" method="POST">
       <div class="formRow">
         <div class="formItem">
           <label for="activityName">Name of activity:</label>
