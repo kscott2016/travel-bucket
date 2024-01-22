@@ -13,7 +13,13 @@
     <ul>
       <% trips.forEach(trip => { %>
       <div class="tripCard">
-          <h3><a href="/trips/<%= trip._id %>"><%= trip.name %> | <%= trip.city %></a></h3>
+          <h3><%= trip.name %>|<%= trip.city %></h3>
+            <div class="status-change">
+              <form action="/trips/<%= trip._id %>?_method=DELETE" method="POST">
+                <button type="submit">Delete this trip
+                </button>
+              </form>
+            </div>
         </div>
       <% }) %>
     </ul>

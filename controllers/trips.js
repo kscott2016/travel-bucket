@@ -70,8 +70,6 @@ function edit (req,res){
       title: `Edit ${req.params.name}`
     })
   })
-  
-
 }
 
 function update (req, res){
@@ -85,7 +83,21 @@ function update (req, res){
     console.log(err)
     res.redirect(`/trips/${trip._id}`)
   })
+}
 
+function deleteTrip(req,res){
+
+  console.log("Function REACHED")
+  Trip.findByIdAndDelete(req.params.tripId)
+  .then(trip=>{
+    res.redirect('/trips')
+  })
+  .catch(err=>{
+    console.log(err)
+    res.redirect('/trips')
+  })
+
+  
 }
 
 
@@ -95,5 +107,6 @@ export{
   create,
   show,
   edit,
-  update
+  update,
+  deleteTrip as delete
 }
