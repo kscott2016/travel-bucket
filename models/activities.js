@@ -2,7 +2,7 @@ import mongoose from 'mongoose'
 
 const Schema = mongoose.Schema
 
-const activitiesSchema = new Schema({
+const activitySchema = new Schema({
   name: String,
   type: String,
   venue: String
@@ -10,8 +10,8 @@ const activitiesSchema = new Schema({
   timestamps: true
 })
 
-const Activities = mongoose.model('Trip', activitiesSchema)
+const Activity = mongoose.model('Activity', activitySchema)
 
 export {
-  Activities
+  Activity
 }

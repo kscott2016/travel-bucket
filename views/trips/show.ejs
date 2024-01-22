@@ -1,0 +1,23 @@
+<%- include('../partials/html-head') %>
+<%- include('../partials/nav') %>
+
+  <main>
+    <h1><%= trip.name %></h1>
+    <p>City: <%= trip.city %> </p>
+    <p>Leave Date: <%= trip.tripStart %></p>
+    <p>Return Date: <%= trip.tripEnd %></p>
+    <img src="<%= trip.imgUrl %>"/>
+    <h2>Activities</h2>
+    <% if (!trip.Activities) { %>
+     <p>No activities planned! Start adding some!</p>
+   <% } else { %>
+    <ul>
+    <% trip.activities.forEach(activity => { %>
+     <li><%= activity.name %></li>
+    <% }) %>
+    </ul>
+    <% }%>
+
+  </main>
+
+<%- include('../partials/footer') %>

@@ -13,8 +13,7 @@
     <ul>
       <% trips.forEach(trip => { %>
       <div class="tripCard">
-        <h3><%= trip.name %>
-          <p><% trip.city %></p>
+          <h3><a href="/trips/<%= trip._id %>"><%= trip.name %> | <%= trip.city %></a></h3>
         </div>
       <% }) %>
     </ul>

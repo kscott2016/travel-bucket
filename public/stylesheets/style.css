@@ -94,3 +94,18 @@ a.footerLink{
   color:rgb(229, 162, 94);
   font-weight: bold;
 }
+
+/*Forms*/
+.formRow{
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+}
+.formItem{
+  display: flex;
+  flex-direction: column;
+}
+
+input{
+  width:40%;
+}
