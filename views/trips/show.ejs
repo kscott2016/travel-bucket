@@ -15,10 +15,11 @@
     <% } else { %>
       <ul>
       <% trip.activities.forEach(activity => { %>
-      <li><%= activity.name %></li>
+      <li><%= activity.name %> at <%= activity.venue %></li>
       <a href="/activities/">Activity Details</a>
       <% }) %>
       </ul>
+      <a href="/trips/<%= trip._id %>/activities/new">Add another activity</a>
     <% }%>
     <form action="/trips/<%= trip._id %>?_method=DELETE" method="POST">
       <button type="submit">Delete this trip

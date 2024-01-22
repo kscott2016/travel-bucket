@@ -4,14 +4,14 @@
 <main id="activitiesForm">
   <% if (user) { %>
   <h1> <%= title %></h1>
-    <form id="activity-form" action="/<%= trip._id %>/activities/new" method="POST">
+    <form id="activity-form" action="/trips/<%= trip._id %>" method="POST">
       <div class="formRow">
         <div class="formItem">
           <label for="activityName">Name of activity:</label>
           <input type="text" name="name" id="activityName">
         </div>
         <div class="formItem">
-          <label for="activityVenue">When do you plan to travel?</label>
+          <label for="activityVenue">Name of venue:</label>
           <input type="text" name="activityVenue" id="venue" >
         </div>
       </div>

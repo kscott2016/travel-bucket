@@ -3,7 +3,6 @@ import {Activity} from '../models/activities.js'
 
 function newActivity(req,res){
 
-  console.log("REACHED NEW ACTIVITY")
   Trip.findById(req.params.tripId)
   .then(trip=>{
         res.render('activities/new',{
@@ -19,7 +18,28 @@ function newActivity(req,res){
 }
 
 function create(req,res){
-
+  console.log(`Adding activity to ${req.params.tripId}`)
+  Trip.findById(req.params.tripId)
+  .then(trip=>{
+    Activity.create(req.body)
+    .then(activity=>{
+      trip.activities.push(activity)
+      trip.save()
+      .then(()=>{
+        console.log("The activity is at: ")
+        console.log(activity.venue)
+        res.redirect(`/trips/${req.params.tripId}`)
+      })
+      .catch(err=>{
+          console.log(err)
+          res.redirect('/trips')
+      })
+    })
+  })
+  .catch(err=>{
+    console.log(err)
+    res.redirect('/trips')
+  })
 }
 
 export{
