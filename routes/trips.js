@@ -23,6 +23,9 @@ router.get('/:tripId/activities/new',isLoggedIn,activitiesCtrl.new)
 //POST /trips/:tripId/activities/new
 router.post('/:tripId/',isLoggedIn,activitiesCtrl.create)
 
+//GET /trips/:tripId/activities/:activityId
+router.get('/:tripId/activities/:activityId/edit',isLoggedIn,activitiesCtrl.edit)
+
 //GET localhost:3000/trips/:tripId/edit
 router.get('/:tripId/edit',isLoggedIn,tripsCtrl.edit)
 

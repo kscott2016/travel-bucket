@@ -43,7 +43,24 @@ function create(req,res){
   })
 }
 
+function edit(req,res){
+
+  Activity.findById(req.params.activityId)
+  .then(activity=>{ 
+   res.render('activities/edit',{
+      activity:activity,
+      title: `Edit ${activity.name}`
+   })
+  })
+}
+
+function deleteActivity(req,res){
+
+}
+
 export{
   newActivity as new,
-  create
+  create,
+  edit,
+  deleteActivity as delete
 }

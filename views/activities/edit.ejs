@@ -1,0 +1,34 @@
+<%- include('../partials/html-head') %>
+<%- include('../partials/nav') %>
+
+<main id="activitiesForm">
+  <% if (user) { %>
+  <h1> <%= title %></h1>
+    <form id="activity-form" action="/activites/<%= activity._id %>" method="POST">
+      <div class="formRow">
+        <div class="formItem">
+          <label for="activityName">Name of activity:</label>
+          <input type="text" name="name" id="activityName">
+        </div>
+        <div class="formItem">
+          <label for="activityVenue">Name of venue:</label>
+          <input type="text" name="venue" id="activityVenue" >
+        </div>
+      </div>
+      <div class="formRow">
+        <div class="formItem">
+          <label for="activityType">What type of activity is this?</label>
+          <select name="type" id="activityType">
+            <option value="tourism">Tourism</option>
+            <option value="event">Event</option>
+            <option value="restaurant">Restaurant</option>
+            <option value="adventure">Adventure</option>
+          </select>
+        </div>
+      <button type="submit">Add Activity</button>
+    </form>
+  <% } %>
+</main>
+
+
+<%- include('../partials/footer') %>

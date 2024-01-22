@@ -17,6 +17,7 @@
       <% trip.activities.forEach(activity => { %>
       <li><%= activity.name %> at <%= activity.venue %></li>
       <a href="/activities/">Activity Details</a>
+      <a href="/trips/<%= trip._id %>/activities/<%= activity._id %>/edit">Edit Activity</a>
       <% }) %>
       </ul>
       <a href="/trips/<%= trip._id %>/activities/new">Add another activity</a>
