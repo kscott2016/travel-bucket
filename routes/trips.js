@@ -22,6 +22,9 @@ router.get('/:tripId/edit',isLoggedIn,tripsCtrl.edit)
 //PUT localhost:3000/trips/:tripId
 router.put('/:tripId',isLoggedIn,tripsCtrl.update)
 
+//DELETE localhost:3000/trips/:tripId
+router.delete(':/tripId',isLoggedIn,tripsCtrl.delete)
+
 export{
   router
 }
