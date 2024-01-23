@@ -5,9 +5,9 @@
 <body>
   <nav>
     <div>
-      <a href="/trips">Trips Dashboard</a>
+      <a href="/trips" class="navBtn">Trips Dashboard</a>
       <% if (user) { %>
-        <a href="/auth/logout">
+        <a href="/auth/logout" class="navBtn">
           <button type="submit">Logout</button>
         </a>
       <% } else { %>
@@ -19,7 +19,7 @@
           data-prompt_parent_id="g_id_onload"
         ></div>
         <div 
-          class="g_id_signin"
+          class="g_id_signin navBtn"
           data-type="standard"
           data-size="large"
           data-theme="outline"

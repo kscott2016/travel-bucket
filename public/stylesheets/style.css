@@ -30,6 +30,12 @@ main {
   flex-wrap: wrap;
 }
 
+.subtitle{
+  font-size:1.5em;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
 
 h1{
   
@@ -40,6 +46,9 @@ h1{
   
 }
 
+p{
+  font-size: 1.25em;
+}
 
 div.welcomeArea{
   display: flex;
@@ -78,10 +87,27 @@ div.welcomeMessage{
   width:60%;
 }
 
+div.tripsContainer>ul{
+  display:flex;
+  flex-direction:row;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  flex-wrap: wrap;
+}
+
+div.tripCard{
+  padding:20px;
+  margin:20px;
+
+  background-color: antiquewhite;
+}
+
 footer{
   padding:30px;
   background-color:  #1fb1b1;
   display: flex;
+  align-items: center;
   justify-content: center;
   color: #fff;
   height:10vh;
@@ -94,16 +120,4 @@ a.footerLink{
 }
 
 /*Forms*/
-.formRow{
-  display: flex;
-  flex-direction: row;
-  padding: 10px;
-}
-.formItem{
-  display: flex;
-  flex-direction: column;
-}
 
-input{
-  width:40%;
-}

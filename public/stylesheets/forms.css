@@ -1,0 +1,13 @@
+.formRow{
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+}
+.formItem{
+  display: flex;
+  flex-direction: column;
+}
+
+input{
+  width:40%;
+}

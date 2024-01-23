@@ -3,27 +3,29 @@
 
 <main>
   <div class="index-welcome-banner">
-    <h2>Welcome <%= user.profile.login %></h2>
-    <div><%= user.profile.name %></div>
+    <h2>Your Trips</h2>
     <a href="/trips/new">Create a trip</a>
   </div>
   <% if (trips.length===0) { %>
   <h3>No trips planed!</h3>
   <% } else { %>
-    <ul>
-      <% trips.forEach(trip => { %>
-      <div class="tripCard">
-          <h3><%= trip.name %>|<%= trip.city %></h3>
-            <div class="status-change">
-              <a href="/trips/<%= trip._id %>">View trip details</a>
-              <form action="/trips/<%= trip._id %>?_method=DELETE" method="POST">
-                <button type="submit">Delete this trip
-                </button>
-              </form>
-            </div>
-        </div>
-      <% }) %>
-    </ul>
+ 
+    <div class="tripsContainer">
+      <ul>
+        <% trips.forEach(trip => { %>
+        <div class="tripCard">
+            <h3><%= trip.name %>|<%= trip.city %></h3>
+              <div class="status-change">
+                <a href="/trips/<%= trip._id %>">View trip details</a>
+                <form action="/trips/<%= trip._id %>?_method=DELETE" method="POST">
+                  <button type="submit">Delete this trip
+                  </button>
+                </form>
+              </div>
+          </div>
+        <% }) %>
+      </ul>
+    </div>
 
   <% } %>
   </main>
