@@ -20,12 +20,17 @@ function index(req,res){
 function newTrip(req,res){
   res.render('trips/new',{
     title:"Add Trip",
-    defaultImg:"https://hgtvhome.sndimg.com/content/dam/images/hgtv/fullset/2022/3/24/1/shutterstock_palm-full-coconuts-on-maldivian-beach575497081.jpg.rend.hgtvcom.1280.853.suffix/1648128375983.jpeg"
+    defaultImg:"https://hgtvhome.sndimg.com/content/dam/images/hgtv/fullset/2022/3/24/1/shutterstock_palm-full-coconuts-on-maldivian-beach575497081.jpg.rend.hgtvcom.1280.853.suffix/1648128375983.jpeg",
+    // trip:trip,
+    //Trip:Trip
   })
 }
 
 function create(req,res){
   req.body.plannedBy = req.user.profile._id
+  for (let key in req.body) {
+    if (req.body[key] === '') delete req.body[key]  
+  }
   
   Trip.create(req.body)
   .then(trip=>{
