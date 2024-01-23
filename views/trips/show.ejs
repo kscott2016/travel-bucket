@@ -5,8 +5,8 @@
     <div class="tripDetails">
     <h1><%= trip.name %></h1>
     <p>City: <%= trip.city %> </p>
-    <p>Leave Date: <%= trip.tripStart %></p>
-    <p>Return Date: <%= trip.tripEnd %></p>
+    <p>Leave Date: <%= (trip.tripStart).toDateString()  %></p>
+    <p>Return Date: <%= (trip.tripEnd).toDateString() %></p>
     <a href="/trips/<%= trip._id %>/edit">Edit this trip</a>
     <h2>Activities</h2>
     <% if (!trip.activities.length) { %>

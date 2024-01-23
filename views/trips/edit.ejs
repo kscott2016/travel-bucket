@@ -8,26 +8,26 @@
       <div class="formRow">
         <div class="formItem">
           <label for="tripName">Name of trip:</label>
-          <input type="text" name="name" id="tripName">
+          <input type="text" name="name" id="tripName" value="<%= trip.name %>">
         </div>
         <div class="formItem">
           <label for="tripCity">Where would you like to travel</label>
-          <input type="text" name="city" id="tripCity">
+          <input type="text" name="city" id="tripCity" value="<%= trip.city %>">
         </div>
       </div>
       <div class="formRow">
         <div class="formItem">
           <label for="tripStart">When do you plan to travel?</label>
-          <input type="datetime-local" name="tripStart" id="tripStart" >
+          <input value="<%= trip.tripStart.toISOString().slice(0,16) %>" type="datetime-local" name="tripStart" id="tripStart">
       </div>
       <div class="formItem">
           <label for="tripEnd">When do you plan to return?</label>
-          <input type="datetime-local" name="tripEnd" id="tripEnd" >
+          <input value="<%= trip.tripEnd.toISOString().slice(0,16) %>" type="datetime-local" name="tripEnd" id="tripEnd">
       </div>
       <div class="formRow">
         <div class="formItem">
           <label for="tripImg">Add a trip image</label>
-          <input type="text" id="tripImg" name="imgUrl">
+          <input type="text" id="tripImg" name="imgUrl" value="<%= trip.imgUrl%>">
         </div>
       </div>
       <button type="submit">Update Trip</button>
