@@ -5,8 +5,9 @@
 <body>
   <nav>
     <div>
-      <a href="/trips" class="navBtn">Trips Dashboard</a>
       <% if (user) { %>
+        <a href="/trips" class="navBtn">Trips Dashboard</a>
+        <a href="/trips/new">Create a trip</a>
         <a href="/auth/logout" class="navBtn">
           <button type="submit">Logout</button>
         </a>

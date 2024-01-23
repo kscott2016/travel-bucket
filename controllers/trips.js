@@ -30,8 +30,6 @@ function create(req,res){
   
   Trip.create(req.body)
   .then(trip=>{
-    console.log("Trip Name", trip.name)
-    console.log("Trip Date", trip.date)
     res.redirect('/trips/new')
   })
   .catch(err=>{

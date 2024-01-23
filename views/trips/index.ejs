@@ -3,8 +3,7 @@
 
 <main>
   <div class="index-welcome-banner">
-    <h2>Your Trips</h2>
-    <a href="/trips/new">Create a trip</a>
+    <h1>Your Trips</h1>
   </div>
   <% if (trips.length===0) { %>
   <h3>No trips planed!</h3>
@@ -14,14 +13,19 @@
       <ul>
         <% trips.forEach(trip => { %>
         <div class="tripCard">
-            <h3><%= trip.name %>|<%= trip.city %></h3>
-              <div class="status-change">
+          <img class="tripImg" src="<%= trip.imgUrl %>" alt="<%= trip.name %>">
+          <div class="tripContent">
+            <h3><%= trip.name %></h3>
+             <h4>Location: <%= trip.city %></h4>
+             <h4><%= (trip.tripStart).toDateString() %> to <%= (trip.tripEnd).toDateString() %>
+              <div class="statusChange">
                 <a href="/trips/<%= trip._id %>">View trip details</a>
                 <form action="/trips/<%= trip._id %>?_method=DELETE" method="POST">
                   <button type="submit">Delete this trip
                   </button>
                 </form>
               </div>
+          </div>
           </div>
         <% }) %>
       </ul>

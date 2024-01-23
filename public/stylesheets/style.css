@@ -99,8 +99,31 @@ div.tripsContainer>ul{
 div.tripCard{
   padding:20px;
   margin:20px;
+  background-color: rgb(241, 241, 241);
+}
 
-  background-color: antiquewhite;
+img.tripImg{
+  max-width:300px;
+}
+
+div.tripContent{
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+div.tripContent>h3, div.tripContent>h4{
+
+  margin:10px;
+}
+
+div.statusChange{
+  display:flex;
+  flex-direction: row;
+  gap:20px;
+  margin-top: 20px;
 }
 
 footer{
