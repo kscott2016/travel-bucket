@@ -3,7 +3,7 @@ import {Activity} from '../models/activities.js'
 
 function index(req,res){
 
-  Trip.find({})
+  Trip.find({}).sort("tripStart")
   .then(trips=>{
     res.render('trips/index',{
       trips,
@@ -17,7 +17,6 @@ function index(req,res){
 }
 
 function newTrip(req,res){
-  console.log("REACHED NEW")
   res.render('trips/new',{
     title:"Add Trip",
     defaultImg:"https://hgtvhome.sndimg.com/content/dam/images/hgtv/fullset/2022/3/24/1/shutterstock_palm-full-coconuts-on-maldivian-beach575497081.jpg.rend.hgtvcom.1280.853.suffix/1648128375983.jpeg"
@@ -26,7 +25,6 @@ function newTrip(req,res){
 
 function create(req,res){
   req.body.owner = req.user.profile._id
-  console.log("Owner:", req.body.owner)
   
   Trip.create(req.body)
   .then(trip=>{
