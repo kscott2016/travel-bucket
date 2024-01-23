@@ -18,7 +18,6 @@ function newActivity(req,res){
 }
 
 function create(req,res){
-  console.log(`Adding activity to ${req.params.tripId}`)
   Trip.findById(req.params.tripId)
   .populate('activities')
   .then(trip=>{
@@ -27,8 +26,6 @@ function create(req,res){
       trip.activities.push(activity)
       trip.save()
       .then(()=>{
-        console.log("The activity is at: ")
-        console.log(activity.venue)
         res.redirect(`/trips/${req.params.tripId}`)
       })
       .catch(err=>{

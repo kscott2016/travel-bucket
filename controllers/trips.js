@@ -48,7 +48,7 @@ function show(req,res){
       trip:trip,
       activity:activity
     })
-   })
+  })
   })
   .catch (err=>{
     console.log(err)
@@ -60,7 +60,6 @@ function edit (req,res){
 
   Trip.findById(req.params.tripId)
   .then(trip=>{
-console.log(`Trip: ${trip.name}`)
     res.render('trips/edit',{
       trip:trip,
       title: `Edit ${trip.name}`
