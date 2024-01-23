@@ -16,13 +16,15 @@
           <div class="tripContent">
             <h3><%= trip.name %></h3>
             <h4>Location: <%= trip.city %></h4>
-            <h4><%= (trip.tripStart).toDateString() %> to <%= (trip.tripEnd).toDateString() %>
+            <h4><%= (trip.tripStart).toDateString() %> to <%= (trip.tripEnd).toDateString() %></h4>
               <div class="statusChange">
-                <a href="/trips/<%= trip._id %>">View trip details</a>
-                <form action="/trips/<%= trip._id %>?_method=DELETE" method="POST">
-                  <button type="submit">Delete this trip
-                  </button>
-                </form>
+                <a class="tripDetailsBtn" href="/trips/<%= trip._id %>">View trip details</a>
+                <a class="tripDeleteBtn">
+                  <form action="/trips/<%= trip._id %>?_method=DELETE" method="POST">
+                    <button type="submit">Delete this trip
+                    </button>
+                  </form>
+                </a>
               </div>
           </div>
           </div>

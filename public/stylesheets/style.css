@@ -101,7 +101,7 @@ div.tripCard{
 }
 
 img.tripImg{
-  max-width:300px;
+  max-width:350px;
 }
 
 div.tripContent>h3{
@@ -130,6 +130,59 @@ div.statusChange{
   flex-direction: row;
   gap:20px;
   margin-top: 20px;
+  font-family: system-ui, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 
+  'Helvetica Neue', sans-serif !important;
+  font-size:16px !important;
+  font-weight:bold !important;
+
+}
+
+a.tripDetailsBtn{
+  background-color:#ff9000;
+  color: #000;
+  text-decoration: none;
+  padding:10px 20px;
+}
+
+a.tripDeleteBtn{
+  background-color: #ea1515;
+  color: #000;
+  text-decoration: none;
+  padding:10px 20px;
+}
+
+a.tripDeleteBtn>form>button{
+  background-color: transparent;
+  border:transparent;
+  font-family: system-ui, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 
+  'Helvetica Neue', sans-serif !important;
+  font-size:16px !important;
+  font-weight:bold !important;
+}
+
+main.tripContainer{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width:100%;
+  align-items: flex-start;
+}
+
+div.tripDetails{
+
+  width:70%;
+  padding: 1.25em 5em;
+}
+
+.tripPic{
+  width: 30%;
+}
+
+.tripPic>img{
+
+  max-width: 100%;
+  height:100%;
+  
 }
 
 footer{

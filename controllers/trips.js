@@ -29,7 +29,7 @@ function create(req,res){
   
   Trip.create(req.body)
   .then(trip=>{
-    res.redirect('/trips/new')
+    res.redirect('/trips')
   })
   .catch(err=>{
     console.log(err)

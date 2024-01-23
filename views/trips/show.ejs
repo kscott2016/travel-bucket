@@ -1,13 +1,13 @@
 <%- include('../partials/html-head') %>
 <%- include('../partials/nav') %>
 
-  <main>
+  <main class="tripContainer">
+    <div class="tripDetails">
     <h1><%= trip.name %></h1>
     <p>City: <%= trip.city %> </p>
     <p>Leave Date: <%= trip.tripStart %></p>
     <p>Return Date: <%= trip.tripEnd %></p>
     <a href="/trips/<%= trip._id %>/edit">Edit this trip</a>
-    <img src="<%= trip.imgUrl %>"/>
     <h2>Activities</h2>
     <% if (!trip.activities.length) { %>
       <p>No activities planned! Start adding some!</p>
@@ -30,6 +30,10 @@
       <button type="submit">Delete this trip
       </button>
     </form>
+    </div>
+    <div class="tripPic">
+    <img src="<%= trip.imgUrl %>"/>
+    </div>
   </main>
 
 <%- include('../partials/footer') %>
