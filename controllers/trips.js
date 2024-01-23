@@ -1,9 +1,10 @@
 import {Trip} from '../models/trips.js'
 import {Activity} from '../models/activities.js'
 
+
 function index(req,res){
 
-  Trip.find({}).sort("tripStart")
+  Trip.find({plannedBy: req.user.profile._id}).sort("tripStart")
   .then(trips=>{
     res.render('trips/index',{
       trips,
@@ -24,7 +25,7 @@ function newTrip(req,res){
 }
 
 function create(req,res){
-  req.body.owner = req.user.profile._id
+  req.body.plannedBy = req.user.profile._id
   
   Trip.create(req.body)
   .then(trip=>{

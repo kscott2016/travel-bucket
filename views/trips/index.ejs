@@ -15,8 +15,8 @@
           <img class="tripImg" src="<%= trip.imgUrl %>" alt="<%= trip.name %>">
           <div class="tripContent">
             <h3><%= trip.name %></h3>
-             <h4>Location: <%= trip.city %></h4>
-             <h4><%= (trip.tripStart).toDateString() %> to <%= (trip.tripEnd).toDateString() %>
+            <h4>Location: <%= trip.city %></h4>
+            <h4><%= (trip.tripStart).toDateString() %> to <%= (trip.tripEnd).toDateString() %>
               <div class="statusChange">
                 <a href="/trips/<%= trip._id %>">View trip details</a>
                 <form action="/trips/<%= trip._id %>?_method=DELETE" method="POST">
@@ -31,6 +31,7 @@
     </div>
 
   <% } %>
+
   </main>
 
 <%- include('../partials/footer') %>
