@@ -87,7 +87,6 @@ function update (req, res){
 
 function deleteTrip(req,res){
 
-  console.log("Function REACHED")
   Trip.findByIdAndDelete(req.params.tripId)
   .then(trip=>{
     res.redirect('/trips')

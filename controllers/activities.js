@@ -45,22 +45,59 @@ function create(req,res){
 
 function edit(req,res){
 
-  Activity.findById(req.params.activityId)
-  .then(activity=>{ 
-   res.render('activities/edit',{
-      activity:activity,
-      title: `Edit ${activity.name}`
-   })
+  Trip.findById(req.params.tripId)
+  .then(trip=>{
+    Activity.findById(req.params.activityId)
+    .then(activity=>{ 
+    res.render('activities/edit',{
+        activity:activity,
+        trip:trip,
+        title: `Edit ${activity.name}`
+    })
+  })
+  })
+}
+
+function update(req,res){
+
+  Trip.findById(req.params.tripId)
+  .then(trip=>{
+
+    Activity.findByIdAndUpdate(req.params.activityId,req.body)
+    .then(activity=>{
+      //res.redirect(`/trips/${trip.Id}/activities/${activity.Id}`)
+      res.redirect(`/trips/${trip._id}`)
+    })
+    .catch(err=>{
+      console.log(err)
+      res.redirect(`/trips/${trip._id}`)
+    })
+  })
+  .catch(err=>{
+    console.log(err)
+    res.redirect(`/trips/${trip._id}`)
   })
 }
 
 function deleteActivity(req,res){
 
+  Trip.findById(req.params.tripId)
+  .then(trip=>{
+    Activity.findByIdAndDelete(req.params.activityId)
+    .then(activity=>{
+      res.redirect(`/trips/${trip._id}`)
+    })
+  })
+  .catch(err=>{
+    console.log(err)
+    res.redirect(`/trips/${trip._id}`)
+  })
 }
 
 export{
   newActivity as new,
   create,
   edit,
+  update,
   deleteActivity as delete
 }

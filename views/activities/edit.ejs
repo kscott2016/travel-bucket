@@ -4,7 +4,7 @@
 <main id="activitiesForm">
   <% if (user) { %>
   <h1> <%= title %></h1>
-    <form id="activity-form" action="/activites/<%= activity._id %>" method="POST">
+    <form id="activity-form" action="/trips/<%= trip._id %>/activities/<%= activity._id %>?_method=PUT" method="POST">
       <div class="formRow">
         <div class="formItem">
           <label for="activityName">Name of activity:</label>
