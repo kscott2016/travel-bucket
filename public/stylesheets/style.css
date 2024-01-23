@@ -20,31 +20,26 @@ body {
   margin: 0;
 }
 
-nav {
-  background-color: midnightblue;
-  color: #1a1a1a;
-  display: flex;
-  align-items: center;
-  padding: 10px;
-  min-height: 60px;
-  height:10vh;
-}
+
 
 main {
   display: flex;
   align-items: center;
   flex-direction: column;
   height:80vh;
+  flex-wrap: wrap;
 }
 
 
 h1{
-  font-size: 3em;;
+  
+  font-family: "Righteous", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 3em;
+  
 }
 
-.right {
-  margin-left: auto;
-}
 
 div.welcomeArea{
   display: flex;
@@ -85,7 +80,7 @@ div.welcomeMessage{
 
 footer{
   padding:30px;
-  background-color: midnightblue;
+  background-color:  #1fb1b1;
   display: flex;
   justify-content: center;
   color: #fff;
@@ -93,8 +88,9 @@ footer{
 }
 
 a.footerLink{
-  color:rgb(229, 162, 94);
+  color:#fff;
   font-weight: bold;
+  text-decoration: none;
 }
 
 /*Forms*/
