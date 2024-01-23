@@ -32,6 +32,9 @@ router.put('/:tripId/activities/:activityId',isLoggedIn,activitiesCtrl.update)
 //DELETE /trips/:tripId/activities/:activityId
 router.delete('/:tripId/activities/:activityId',isLoggedIn,activitiesCtrl.delete)
 
+//GET /trips/:tripId/activities/:activityId
+router.get('/:tripId/activities/:activityId',isLoggedIn,activitiesCtrl.show)
+
 //GET localhost:3000/trips/:tripId/edit
 router.get('/:tripId/edit',isLoggedIn,tripsCtrl.edit)
 

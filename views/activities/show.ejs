@@ -1,0 +1,14 @@
+<%- include('../partials/html-head') %>
+<%- include('../partials/nav') %>
+
+  <main>
+    <h1><%= trip.name %></h1>
+    <p>City: <%= trip.city %> </p>
+    <p>Leave Date: <%= trip.tripStart %></p>
+    <p>Return Date: <%= trip.tripEnd %></p>
+    <h2><%= activity.name %></h2>
+    <p><%= activity.venue %></p>
+    <p><%= activity.type %></p>
+  </main>
+
+<%- include('../partials/footer') %>

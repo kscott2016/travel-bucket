@@ -79,6 +79,25 @@ function update(req,res){
   })
 }
 
+function show(req,res){
+
+  Trip.findById(req.params.tripId)
+  .then(trip=> {
+   Activity.findById(req.params.activityId)
+   .then(activity=>{
+    res.render('activities/show',{
+      title:req.params.name,
+      trip:trip,
+      activity:activity
+    })
+   })
+  })
+  .catch (err=>{
+    console.log(err)
+    res.redirect(`/trips/${trip._id}`)
+  })
+}
+
 function deleteActivity(req,res){
 
   Trip.findById(req.params.tripId)
@@ -99,5 +118,6 @@ export{
   create,
   edit,
   update,
+  show,
   deleteActivity as delete
 }
