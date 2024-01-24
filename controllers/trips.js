@@ -21,8 +21,6 @@ function newTrip(req,res){
   res.render('trips/new',{
     title:"Add Trip",
     defaultImg:"https://hgtvhome.sndimg.com/content/dam/images/hgtv/fullset/2022/3/24/1/shutterstock_palm-full-coconuts-on-maldivian-beach575497081.jpg.rend.hgtvcom.1280.853.suffix/1648128375983.jpeg",
-    // trip:trip,
-    //Trip:Trip
   })
 }
 

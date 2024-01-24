@@ -62,7 +62,6 @@ function update(req,res){
 
     Activity.findByIdAndUpdate(req.params.activityId,req.body)
     .then(activity=>{
-      //res.redirect(`/trips/${trip.Id}/activities/${activity.Id}`)
       res.redirect(`/trips/${trip._id}`)
     })
     .catch(err=>{

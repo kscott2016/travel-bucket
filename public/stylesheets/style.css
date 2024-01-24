@@ -258,10 +258,8 @@ div.iconContainer{
   padding:10px;
   border:solid 4px #00bcd4;
   i{
-  
     color:#00bcd4;
     font-size: 1.75em;
-  
   }
 }
 
@@ -303,17 +301,10 @@ div.tripLocation{
   color: #fff;
 }
 
-/* div.tripDates>h2{
-  text-shadow: 2px 2px 10px #f3f3f3b8;
-} */
 
 div.tripPicContainer{
   width: 30%;
   height: 100vh;
-  /* background-image: url("https://i.pinimg.com/originals/f6/86/62/f68662823587b57d81f1152aea19ace2.jpg"); */
-  /* background-size: cover; */
-  /* display: flex;
-  align-items: center; */
 }
 
 img.tripPic{
@@ -427,6 +418,4 @@ footer{
 transform: translateY(-0.25em);
 color:#f5c88e;
 }
-
-/*Forms*/
 
