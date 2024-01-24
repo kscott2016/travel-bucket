@@ -1,6 +1,6 @@
 .formRow{
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   padding: 10px;
 }
 .formItem{
@@ -9,5 +9,5 @@
 }
 
 input{
-  width:40%;
+  width:100%;
 }

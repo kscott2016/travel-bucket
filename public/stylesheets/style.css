@@ -41,8 +41,16 @@ h1{
   font-family: "Righteous", sans-serif;
   font-weight: 400;
   font-style: normal;
-  font-size: 4em;
-  
+  font-size: 5em;
+  margin: 0px;
+}
+
+h2{
+  font-size: 2.25em;
+  background-color: #ff9000;
+  color: #FFF;
+  width: fit-content;
+  padding:10px 30px;
 }
 
 p{
@@ -177,12 +185,16 @@ div.statusChange{
 
 }
 
-a.activitiesBtn{
-  background-color: #01afcd;
-  color: #000;
-  text-decoration: none;
-  padding:10px 20px;
-  font-weight: bold;
+div.tripStatusChange{
+  display:flex;
+  flex-direction: row;
+  gap:20px;
+  margin-top: 50px;
+  font-family: system-ui, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 
+  'Helvetica Neue', sans-serif !important;
+  font-size:16px !important;
+  font-weight:bold !important;
+
 }
 
 a.tripDetailsBtn, a.homeBtn{
@@ -232,14 +244,50 @@ div.topInfo{
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: space-between;
   gap: 20px;
+  margin-bottom: 20px;
+  align-items: center;
+}
+
+div.iconContainer{
+  background-color: #fff;
+  height: 100%;
+  display:flex;
+  align-items: center;
+  padding:10px;
+  border:solid 4px #00bcd4;
+  i{
+  
+    color:#00bcd4;
+    font-size: 1.75em;
+  
+  }
 }
 
 div.tripDates{
   display: flex;
   flex-direction: row;
-  gap: 20px;
+  gap: 10px;
+  justify-content: flex-start;
+  align-items: center;
+  font-family: "Righteous", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1em;
+  background-image: linear-gradient(#00bcd4, #038495);
+  background-size: cover; 
+  padding:0px 10px 0px 0;
+  width:fit-content;
+  height:fit-content;
+  color: #fff;
+  
+}
+
+div.tripLocation{
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
   width:100%;
   justify-content: flex-start;
   align-items: center;
@@ -247,17 +295,12 @@ div.tripDates{
   font-weight: 400;
   font-style: normal;
   font-size: 1em;
-  /* background-image: url("https://i.pinimg.com/originals/f6/86/62/f68662823587b57d81f1152aea19ace2.jpg"); */
-  /* background-color:  #00bcd4; */
   background-image: linear-gradient(#00bcd4, #038495);
   background-size: cover; 
-  padding:5px 10px;
+  padding:0px 10px 0px 0;
   width:fit-content;
+  height:fit-content;
   color: #fff;
-}
-
-div.tripDates>*{
-  margin:10px;
 }
 
 /* div.tripDates>h2{
@@ -284,7 +327,75 @@ img.tripPic{
 div.tripDetails{
 
   width:70%;
-  padding: 1.25em 5em;
+  padding: 3em 5em;
+}
+
+/*ACTIVITIES*/
+
+ul.activitiesList{
+  padding-left: 0;
+  margin-bottom:20px;
+}
+
+li.activityListItem{
+  list-style: none;
+  margin:20px 0;
+}
+
+div.activityCard{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap:20px;
+  background-color: #eaeaea;
+  width:fit-content;
+  padding-right:30px;
+}
+
+div.activityCategory{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background-color: #ff9000;
+  color:#fff;
+  padding: 20px 10px;
+  gap:20px;
+  p{
+    margin:0;
+    font-size:0.75em;
+  }
+
+  i{
+    font-size: 1.5em;
+  }
+
+}
+
+span.activityName{
+  font-size: 1.25em;
+}
+
+div.activityOptions{
+
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  gap:30px;
+}
+
+div.addActivitiesDiv{
+
+  margin-top: 40px;
+}
+
+a.activitiesBtn{
+  background-color: #01afcd;
+  color: #000;
+  text-decoration: none;
+  padding:10px 20px;
+  font-weight: bold;
+  
 }
 
 footer{
