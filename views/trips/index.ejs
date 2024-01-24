@@ -13,7 +13,7 @@
         <% trips.forEach(trip => { %>
         <div class="tripCard">
     
-            <span class="flag"> <i class="fa-regular fa-calendar fa-sm"></i> 
+            <span class="flag"> <i class="icon fa-solid fa-calendar-days"></i>
               <%= (trip.tripStart).toDateString() %> to <%= (trip.tripEnd).toDateString() %></span>
         
           <img class="tripImg" src="<%= trip.imgUrl %>" alt="<%= trip.name %>">

@@ -115,6 +115,7 @@ div.tripCard{
 	left:0;
 	top:10px;
 	display: flex;
+  justify-content: center;
   align-items: center;
 	height: 30px;
 	line-height: auto;
@@ -196,6 +197,10 @@ a.homeBtn{
   'Helvetica Neue', sans-serif !important;
   font-weight:bold !important;
 
+}
+
+.icon{
+  margin: 5px;
 }
 
 .tripDeleteBtn{
