@@ -57,6 +57,8 @@ div.welcomeArea{
   height:80vh;
   width: 100%;
   flex-wrap: wrap-reverse;
+  background-color: #ffffff;
+background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ff8b00' fill-opacity='0.4' fill-rule='evenodd'%3E%3Cpath d='M5 0h1L0 6V5zM6 5v1H5z'/%3E%3C/g%3E%3C/svg%3E");
 }
 
 div.videoContainer, div.tripContainer{
@@ -119,7 +121,6 @@ div.tripCard{
   align-items: center;
 	height: 30px;
 	line-height: auto;
-  /* background-image: linear-gradient(#00bcd4, #04707e); */
   background-color: #01afcd;
   border-radius: 0px 40px 40px 0;
 	color: #FFF;
@@ -239,7 +240,9 @@ div.tripDates{
   display: flex;
   flex-direction: row;
   gap: 20px;
-  justify-content: space-between;
+  width:100%;
+  justify-content: flex-start;
+  align-items: center;
   font-family: "Righteous", sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -248,10 +251,13 @@ div.tripDates{
   /* background-color:  #00bcd4; */
   background-image: linear-gradient(#00bcd4, #038495);
   background-size: cover; 
-  padding:5px 20px;
+  padding:5px 10px;
+  width:fit-content;
   color: #fff;
-  border-radius: 40px 40px 40px 40px;
-  
+}
+
+div.tripDates>*{
+  margin:10px;
 }
 
 /* div.tripDates>h2{
@@ -288,13 +294,27 @@ footer{
   align-items: center;
   justify-content: center;
   color: #fff;
+  gap:20px;
   height:10vh;
 }
 
-a.footerLink{
+.footerLink{
   color:#fff;
   font-weight: bold;
   text-decoration: none;
+
+  a{
+    text-decoration: none;
+    color: #fff;
+  }
+}
+
+.footerLink:hover,
+.footerLink:hover>a,
+.footerLink:focus,
+.footerLink:focus>a{
+transform: translateY(-0.25em);
+color:#f5c88e;
 }
 
 /*Forms*/

@@ -8,11 +8,10 @@
     <div class="tripDetails">
       <div class="topInfo">
     <h1><%= trip.name %></h1>
-    <div class="tripDates">
-      <i class="icon fa-solid fa-calendar-days"></i>
-    <h2> <%= (trip.tripStart).toDateString()  %> - </h2>
-    <h2><%= (trip.tripEnd).toDateString() %> </h2>
     </div>
+    <div class="tripDates">
+      <i class="icon fa-solid fa-calendar-days fa-lg"></i>
+    <h2> <%= (trip.tripStart).toDateString()  %> - <%= (trip.tripEnd).toDateString() %> </h2>
     </div>
     <p>City: <%= trip.city %> </p>
    
