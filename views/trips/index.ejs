@@ -12,11 +12,15 @@
       <ul>
         <% trips.forEach(trip => { %>
         <div class="tripCard">
+    
+            <span class="flag"> <i class="fa-regular fa-calendar fa-sm"></i> 
+              <%= (trip.tripStart).toDateString() %> to <%= (trip.tripEnd).toDateString() %></span>
+        
           <img class="tripImg" src="<%= trip.imgUrl %>" alt="<%= trip.name %>">
           <div class="tripContent">
             <h3><%= trip.name %></h3>
-            <h4>Location: <%= trip.city %></h4>
-            <h4><%= (trip.tripStart).toDateString() %> to <%= (trip.tripEnd).toDateString() %></h4>
+            <h4><%= trip.city %></h4>
+            <!-- <h4><%= (trip.tripStart).toDateString() %> to <%= (trip.tripEnd).toDateString() %></h4> -->
               <div class="statusChange">
                 <a class="tripDetailsBtn" href="/trips/<%= trip._id %>">View trip details</a>
                 <a class="tripDeleteBtn">

@@ -9,35 +9,42 @@
       <div class="topInfo">
     <h1><%= trip.name %></h1>
     <div class="tripDates">
+    <i class="fa-regular fa-calendar fa-sm"></i>
     <h2> <%= (trip.tripStart).toDateString()  %> - </h2>
     <h2><%= (trip.tripEnd).toDateString() %> </h2>
     </div>
     </div>
     <p>City: <%= trip.city %> </p>
    
-    <a href="/trips/<%= trip._id %>/edit">Edit this trip</a>
+    
     <h2>Activities</h2>
     <% if (!trip.activities.length) { %>
       <p>No activities planned! Start adding some!</p>
-      <a href="/trips/<%= trip._id %>/activities/new">Add activity</a>
+      <a class="activitiesBtn" href="/trips/<%= trip._id %>/activities/new">Add activity</a>
     <% } else { %>
       <ul>
       <% trip.activities.forEach(activity => { %>
       <li><%= activity.name %> at <%= activity.venue %></li>
       <a href="/trips/<%= trip._id %>/activities/<%= activity._id %>">Activity Details</a>
       <a href="/trips/<%= trip._id %>/activities/<%= activity._id %>/edit">Edit Activity</a>
-      <form action="/trips/<%= trip._id %>/activities/<%= activity._id %>?_method=DELETE" method="POST">
-        <button type="submit">Delete this trip
+    <form action="/trips/<%= trip._id %>/activities/<%= activity._id %>?_method=DELETE" method="POST">
+        <button type="submit">Delete this activity
         </button>
       </form>
       <% }) %>
       </ul>
-      <a href="/trips/<%= trip._id %>/activities/new">Add another activity</a>
+      <a class="activitiesBtn" href="/trips/<%= trip._id %>/activities/new">Add another activity</a>
     <% }%>
-    <form action="/trips/<%= trip._id %>?_method=DELETE" method="POST">
-      <button type="submit">Delete this trip
-      </button>
-    </form>
+  
+    <div class="statusChange">
+      <a class="tripDetailsBtn" href="/trips/<%= trip._id %>/edit">Edit trip details</a>
+      <a class="tripDeleteBtn">
+        <form action="/trips/<%= trip._id %>?_method=DELETE" method="POST">
+          <button type="submit">Delete this trip
+          </button>
+        </form>
+      </a>
+    </div>
     </div>
   </main>
 

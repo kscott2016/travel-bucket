@@ -23,6 +23,7 @@ body {
 
 main {
   display: flex;
+  align-items: center;
   flex-direction: column;
   align-items: center;
   min-height:80vh;
@@ -53,6 +54,7 @@ div.welcomeArea{
   flex-direction: row;
   justify-content: space-evenly;
   align-content: stretch;
+  height:80vh;
   width: 100%;
   flex-wrap: wrap-reverse;
 }
@@ -101,6 +103,34 @@ div.tripCard{
   margin:20px;
   background-color: rgb(241, 241, 241);
   min-height: 400px;
+  position: relative;
+}
+
+.flag{
+	position: absolute;
+	font-size: 1em;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+	left:0;
+	top:10px;
+	display: flex;
+  align-items: center;
+	height: 30px;
+	line-height: auto;
+  /* background-image: linear-gradient(#00bcd4, #04707e); */
+  background-color: #01afcd;
+  border-radius: 0px 40px 40px 0;
+	color: #FFF;
+	padding: 0px 10px 0 10px;
+	z-index:1;
+  text-shadow: 1px 1px 1px #000000b8;
+  
+  &:after{
+    position: absolute;
+    right:-5px;
+    top:0;
+  }
 }
 
 img.tripImg{
@@ -109,7 +139,7 @@ img.tripImg{
 
 div.tripContent>h3{
 
-  font-family: "Righteous", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-style: normal;
   font-size:1.75em;
@@ -126,6 +156,11 @@ div.tripContent{
 div.tripContent>h3, div.tripContent>h4{
 
   margin:10px;
+
+}
+
+div.tripContent>h4{
+  font-size: 1.5em;
 }
 
 div.statusChange{
@@ -140,21 +175,37 @@ div.statusChange{
 
 }
 
-a.tripDetailsBtn{
+a.activitiesBtn{
+  background-color: #01afcd;
+  color: #000;
+  text-decoration: none;
+  padding:10px 20px;
+  font-weight: bold;
+}
+
+a.tripDetailsBtn, a.homeBtn{
   background-color:#ff9000;
   color: #000;
   text-decoration: none;
   padding:10px 20px;
 }
 
-a.tripDeleteBtn{
+a.homeBtn{
+  font-size:1.25em;
+  font-family: system-ui, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 
+  'Helvetica Neue', sans-serif !important;
+  font-weight:bold !important;
+
+}
+
+.tripDeleteBtn{
   background-color: #ea1515;
   color: #000;
   text-decoration: none;
   padding:10px 20px;
 }
 
-a.tripDeleteBtn>form>button{
+.tripDeleteBtn>form>button{
   background-color: transparent;
   border:transparent;
   font-family: system-ui, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 
@@ -175,7 +226,8 @@ div.topInfo{
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
+  gap: 20px;
 }
 
 div.tripDates{
@@ -186,17 +238,20 @@ div.tripDates{
   font-family: "Righteous", sans-serif;
   font-weight: 400;
   font-style: normal;
-  font-size: 1.5em;
-  background-image: url("https://i.pinimg.com/originals/f6/86/62/f68662823587b57d81f1152aea19ace2.jpg");
+  font-size: 1em;
+  /* background-image: url("https://i.pinimg.com/originals/f6/86/62/f68662823587b57d81f1152aea19ace2.jpg"); */
+  /* background-color:  #00bcd4; */
+  background-image: linear-gradient(#00bcd4, #038495);
   background-size: cover; 
   padding:5px 20px;
   color: #fff;
+  border-radius: 40px 40px 40px 40px;
   
 }
 
-div.tripDates>h2{
-  text-shadow: 5px 3px 3px #000000c2;
-}
+/* div.tripDates>h2{
+  text-shadow: 2px 2px 10px #f3f3f3b8;
+} */
 
 div.tripPicContainer{
   width: 30%;
