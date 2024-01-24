@@ -42,7 +42,11 @@
             <i class="icon fa-solid fa-utensils fa-2xl"></i>
           <% } else if (activity.type.toLowerCase() === "adventure") { %>
             <i class="icon fa-solid fa-bolt-lightning fa-2xl"></i>
-          <% } %>
+          <% } else if (activity.type.toLowerCase() === "Leisure") { %>
+            <i class="icon fa-solid fa-spa fa-2xl"></i>
+          <% } else { %>
+            <i class="icon fa-solid fa-question fa-2xl"></i>
+            <% } %>
         </div>
         <p><%= activity.type %></p>
         </div>

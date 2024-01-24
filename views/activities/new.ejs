@@ -11,7 +11,7 @@
           <input type="text" name="name" id="activityName">
         </div>
         <div class="formItem">
-          <label for="activityVenue">Name of venue:</label>
+          <label for="activityVenue">Name of venue/business:</label>
           <input type="text" name="venue" id="activityVenue" >
         </div>
       </div>
@@ -19,10 +19,13 @@
         <div class="formItem">
           <label for="activityType">What type of activity is this?</label>
           <select name="type" id="activityType">
-            <option value="tourism">Tourism</option>
+            <option value="adventure">Adventure</option>
+            <option value="adventure">Leisure</option>
             <option value="event">Event</option>
             <option value="restaurant">Restaurant</option>
-            <option value="adventure">Adventure</option>
+            <option value="tourism">Tourism</option>
+            <option value="other" selected >Other</option>
+            
           </select>
         </div>
       <button type="submit">Add Activity</button>
