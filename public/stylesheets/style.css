@@ -23,10 +23,10 @@ body {
 
 main {
   display: flex;
-  align-items: center;
   flex-direction: column;
-  height:80vh;
-  flex-wrap: wrap;
+  align-items: center;
+  min-height:80vh;
+  height:100%;
 }
 
 .subtitle{
@@ -40,7 +40,7 @@ h1{
   font-family: "Righteous", sans-serif;
   font-weight: 400;
   font-style: normal;
-  font-size: 3em;
+  font-size: 4em;
   
 }
 
@@ -57,11 +57,11 @@ div.welcomeArea{
   flex-wrap: wrap-reverse;
 }
 
-div.videoContainer{
+div.videoContainer, div.tripContainer{
   position: relative;
   overflow: hidden;
   width:40%;
-  height:80vh;
+ 
   /* width: 100%; */
   /* height: 100vh; */
   /* height: 100%; */
@@ -89,19 +89,22 @@ div.tripsContainer>ul{
   display:flex;
   flex-direction:row;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   gap: 1em;
   flex-wrap: wrap;
 }
 
 div.tripCard{
+  display: inherit;
+  flex-direction: column;
   padding:20px;
   margin:20px;
   background-color: rgb(241, 241, 241);
+  min-height: 400px;
 }
 
 img.tripImg{
-  max-width:350px;
+  height:200px;
 }
 
 div.tripContent>h3{
@@ -164,25 +167,58 @@ main.tripContainer{
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  width:100%;
   align-items: flex-start;
+  height: 100%;
+}
+
+div.topInfo{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+div.tripDates{
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  justify-content: space-between;
+  font-family: "Righteous", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.5em;
+  background-image: url("https://i.pinimg.com/originals/f6/86/62/f68662823587b57d81f1152aea19ace2.jpg");
+  background-size: cover; 
+  padding:5px 20px;
+  color: #fff;
+  
+}
+
+div.tripDates>h2{
+  text-shadow: 5px 3px 3px #000000c2;
+}
+
+div.tripPicContainer{
+  width: 30%;
+  height: 100vh;
+  /* background-image: url("https://i.pinimg.com/originals/f6/86/62/f68662823587b57d81f1152aea19ace2.jpg"); */
+  /* background-size: cover; */
+  /* display: flex;
+  align-items: center; */
+}
+
+img.tripPic{
+
+  object-fit: cover;
+  width: 100%;
+  height: inherit;
+  border-right: 10px solid rgb(255, 102, 0);
 }
 
 div.tripDetails{
 
   width:70%;
   padding: 1.25em 5em;
-}
-
-.tripPic{
-  width: 30%;
-}
-
-.tripPic>img{
-
-  max-width: 100%;
-  height:100%;
-  
 }
 
 footer{

@@ -2,11 +2,19 @@
 <%- include('../partials/nav') %>
 
   <main class="tripContainer">
+    <div class="tripPicContainer">
+      <img class="tripPic" src="<%= trip.imgUrl %>"/>
+      </div>
     <div class="tripDetails">
+      <div class="topInfo">
     <h1><%= trip.name %></h1>
+    <div class="tripDates">
+    <h2> <%= (trip.tripStart).toDateString()  %> - </h2>
+    <h2><%= (trip.tripEnd).toDateString() %> </h2>
+    </div>
+    </div>
     <p>City: <%= trip.city %> </p>
-    <p>Leave Date: <%= (trip.tripStart).toDateString()  %></p>
-    <p>Return Date: <%= (trip.tripEnd).toDateString() %></p>
+   
     <a href="/trips/<%= trip._id %>/edit">Edit this trip</a>
     <h2>Activities</h2>
     <% if (!trip.activities.length) { %>
@@ -30,9 +38,6 @@
       <button type="submit">Delete this trip
       </button>
     </form>
-    </div>
-    <div class="tripPic">
-    <img src="<%= trip.imgUrl %>"/>
     </div>
   </main>
 
