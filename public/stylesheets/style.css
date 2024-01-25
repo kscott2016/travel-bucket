@@ -322,6 +322,11 @@ div.tripDetails{
 
 /*ACTIVITIES*/
 
+div.activitiesContainer{
+  background-color: #f7f3f3;
+  padding-bottom: 20px;
+}
+
 ul.activitiesList{
   padding-left: 0;
   margin-bottom:20px;
@@ -337,9 +342,10 @@ div.activityCard{
   flex-direction: row;
   align-items: center;
   gap:20px;
-  background-color: #eaeaea;
+  background-color: #ffffff;
   width:fit-content;
   padding-right:30px;
+  border:solid 1px #ff9000;
 }
 
 div.activityCategory{

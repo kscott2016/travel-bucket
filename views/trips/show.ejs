@@ -22,7 +22,7 @@
     </div>
     </div>
     <hr>
-    
+    <div class="activitiesContainer">
     <h2>Activities</h2>
     <% if (!trip.activities.length) { %>
       <p>No activities planned! Start adding some!</p>
@@ -66,6 +66,7 @@
       <% }) %>
       </ul>
     <% }%>
+    </div>
   
     <div class="tripStatusChange">
       <a class="activitiesBtn" href="/trips/<%= trip._id %>/activities/new">Add another activity</a>
