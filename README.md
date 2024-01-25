@@ -32,6 +32,7 @@ With this app you'll be able to create multiple trips that lists your desired ci
 <li>Slick slider was used for the reviews section. Details on this project can be found <a href="https://kenwheeler.github.io/slick/" target="blank">here</a>.</li>
 <li>Icons used on this app were from Font Awesome - <a href="https://fontawesome.com/" target="blank">learn more</a></li>
 <li><i>Righteous</i> font was used from Google Fonts - <a href="https://fonts.google.com/specimen/Righteous?classification=Display" target="blank">learn more</a></li>
+<li>Favicon created by doraclub - Flatico <a href="https://www.flaticon.com/free-icons/travel" title="travel icons">Learn more</a></li>
 </ul>
 
 ## Ice Box 🧊
