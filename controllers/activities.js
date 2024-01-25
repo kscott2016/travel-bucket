@@ -5,7 +5,7 @@ function newActivity(req,res){
 
   Trip.findById(req.params.tripId)
   .then(trip=>{
-        res.render('activities/new',{
+    res.render('activities/new',{
       trip:trip,
       title: 'Add Activity'
     })
@@ -79,14 +79,14 @@ function show(req,res){
 
   Trip.findById(req.params.tripId)
   .then(trip=> {
-   Activity.findById(req.params.activityId)
-   .then(activity=>{
+  Activity.findById(req.params.activityId)
+  .then(activity=>{
     res.render('activities/show',{
       title:req.params.name,
       trip:trip,
       activity:activity
     })
-   })
+  })
   })
   .catch (err=>{
     console.log(err)

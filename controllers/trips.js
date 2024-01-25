@@ -45,8 +45,8 @@ function show(req,res){
   Trip.findById(req.params.tripId)
   .populate('activities')
   .then(trip=> {
-   Activity.find({_id:{$nin:trip.activities}})
-   .then(activity=>{
+  Activity.find({_id:{$nin:trip.activities}})
+  .then(activity=>{
     res.render('trips/show',{
       title:req.params.name,
       trip:trip,
