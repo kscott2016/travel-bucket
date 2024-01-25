@@ -24,8 +24,8 @@
       <h1>Travel Bucket</h1>
       <p>Design the travel plans of your dreams and share with others!</p>
       <div>
-       <h2 class="welcomeHeader">Welcome <%= user ? `back, ${user.profile.name}`
-         : "back, travel dreamer" %></h2>
+      <h2 class="welcomeHeader">Welcome <%= user ? `back, ${user.profile.name}`
+        : "back, travel dreamer" %></h2>
       </div>
       <% if (user) { %>
         <a class="homeBtn" href="/trips">View trips</a>
@@ -47,8 +47,67 @@
           data-logo_alignment="left"
         ></div>
         <% } %>
+        <% class Reviews {
+          constructor(review, stars, name) {
+              this.reviewContent = review
+              this.stars= stars
+              this.name=name
+          }
+  
+          get reviewContent() {
+              return this.review
+          }
+       
+          set reviewContent(x) {
+              this.review = x
+          }
+  
+          get numOfStars() {
+              return this.stars
+          }
+       
+          set numOfStars(x) {
+              this.stars = x
+          }
+  
+          get revName() {
+              return this.name
+          }
+       
+          set revName(x) {
+              this.name = x
+          }
+      }
+      
+      let review1= new Reviews("Using this app helped me not kill my friends while planning!",5,"Carmen San Diego")
+  
+      let review2= new Reviews("Using this app helped me discover all kinds of things during my trips!",4, "Indiana Jones")
+  
+      let review3= new Reviews("Such a time saver!",4, "Captain Jack Sparrow")
+  
+      // console.log(`Review2: ${review2.reviewContent} and stars: ${review2.stars}`)
+  
+      let listOfReviews=[review1,review2,review3]
+      
+      %>
+
+        <div class="reviewsArea">
+          <% listOfReviews.forEach(review => { %>
+            <div class="reviewCard">
+              <div class="starRow">
+                <% for( let index = 0; index < review.stars; index++ ) { %>
+                  <i class="fa-solid fa-star"></i>
+                <% } %>
+              </div>
+              <p><%= review.reviewContent %></p>
+              <p><%= review.name %>
+            </div>
+          <% }) %>
+        </div>
     </div>
-  </div>
+    </div>
+
+ 
 
 </main>
 
