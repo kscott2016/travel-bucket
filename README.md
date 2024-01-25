@@ -38,6 +38,6 @@ With this app you'll be able to create multiple trips that lists your desired ci
 <ul>
 <li>[] Add the ability to share travel plans with other users so they can view and add travel ideas</li>
 <li> [] Add the ability to leave comments and photos on a travel plan a user either owns or have been invited to</li>
-<li> Give users the option to add a hotel or an Air Bnb to their trip plan(s) based on the city selected</li>
+<li> [] Give users the option to add a hotel or an Air Bnb to their trip plan(s) based on the city selected</li>
 </ul>
 
