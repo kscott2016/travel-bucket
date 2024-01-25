@@ -235,7 +235,6 @@ a.homeBtn{
 main.tripContainer{
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
   align-items: flex-start;
   height: 100%;
 }
@@ -387,6 +386,13 @@ a.activitiesBtn{
   padding:10px 20px;
   font-weight: bold;
   
+}
+
+a:hover,
+a:focus
+{
+  box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+  transform: translateY(-0.25em);
 }
 
 footer{
