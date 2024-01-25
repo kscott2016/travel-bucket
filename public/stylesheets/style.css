@@ -215,7 +215,10 @@ a.tripDetailsBtn{
 }
 
 a.homeBtn{
-
+  
+  background-color:#ff9000;
+  color: #000;
+  text-decoration: none;
   padding:10px 20px;
 }
 
