@@ -214,6 +214,12 @@ a.tripDetailsBtn{
   padding:10px;
 }
 
+.activeNavBtn, .navBtn:hover{
+
+  background-color:#ff9000;
+  color: #000;
+}
+
 a.homeBtn{
   
   background-color:#ff9000;
@@ -261,7 +267,7 @@ div.topInfo{
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
   gap: 20px;
   margin-bottom: 20px;
   align-items: center;
@@ -439,10 +445,6 @@ footer{
     text-decoration: none;
     color: #fff;
   }
-}
-
-a:link{
-  color:pink;
 }
 
 .footerLink:hover,

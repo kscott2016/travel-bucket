@@ -6,9 +6,9 @@
   <nav>
     <div>
       <% if (user) { %>
-        <a href="/trips" class="navBtn" onclick="buttonStatusChange()">Trips Dashboard</a>
-        <a href="/trips/new" class="navBtn">Create a trip</a>
-        <a href="/auth/logout" class="navBtn">
+        <a href="/trips" class="navBtn <%= title === 'Your trips' ? 'activeNavBtn' : '' %>" onclick="buttonStatusChange()">Trips Dashboard</a>
+        <a href="/trips/new" class="navBtn <%= title === 'Add Trip' ? 'activeNavBtn' : '' %>">Create a trip</a>
+        <a href="/auth/logout" class="navBtn <%= title === 'Add Movie' ? 'activeNavBtn' : '' %>">
         Logout</a>
       <% } %>
 

@@ -15,7 +15,7 @@ With this app you'll be able to create multiple trips that lists your desired ci
 <ul>
 <li><a href="https://trello.com/b/PuUPZ8rS/travel-bucket" target="blank">Trello Board</a></li>
 <li><a href="https://trello.com/b/PuUPZ8rS/travel-bucket" target="blank">Wireframes (located on Trello Board)</a></li>
-<li><a href="https://trello.com/1/cards/65a9a258fa3f3607e77d5b45/attachments/65aadd3fa16d494b6cc85239/previews/65aadd40a16d494b6cc852d8/download/Screenshot_2024-01-19_at_2.35.44_PM.png" target="blank">ERDs</a></li>
+<li><a href="https://trello.com/1/cards/65a9a258fa3f3607e77d5b45/attachments/65aadd3fa16d494b6cc85239/previews/65aadd40a16d494b6cc852d8/download/Screenshot_2024-01-19_at_2.35.44_PM.png" target="blank">ERD</a></li>
 </ul>
 
 ## Technologies used 💾
