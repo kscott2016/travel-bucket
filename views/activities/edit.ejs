@@ -4,6 +4,7 @@
 <main id="activitiesForm">
   <% if (user) { %>
   <h1> <%= title %></h1>
+  <div class="seperator"></div>
     <form id="activity-form" action="/trips/<%= trip._id %>/activities/<%= activity._id %>?_method=PUT" method="POST">
       <div class="formRow">
         <div class="formItem">
@@ -30,7 +31,9 @@
               <% } %>>Adventure</option>
           </select>
         </div>
+        <div class="submitBtn">
       <button type="submit">Add Activity</button>
+      </div>
     </form>
   <% } %>
 </main>

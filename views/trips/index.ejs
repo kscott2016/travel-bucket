@@ -24,7 +24,7 @@
               <div class="statusChange">
                 <a class="tripDetailsBtn" href="/trips/<%= trip._id %>">View trip details</a>
                 <a class="tripDeleteBtn">
-                  <form action="/trips/<%= trip._id %>?_method=DELETE" method="POST">
+                  <form class="deleteBtn" action="/trips/<%= trip._id %>?_method=DELETE" method="POST">
                     <button type="submit">Delete this trip
                     </button>
                   </form>

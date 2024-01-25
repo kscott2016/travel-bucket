@@ -4,6 +4,7 @@
 <main class="tripForm">
   <% if (user) { %>
   <h1>Create a Trip</h1>
+  <div class="seperator"></div>
     <form id="trip-form" action="/trips" method="POST">
       <div class="formRow">
         <div class="formItem">
@@ -30,7 +31,7 @@
           <input type="text" id="tripImg" name="imgUrl" value="<%= defaultImg %>">
         </div>
       </div>
-      <button type="submit">Add Trip</button>
+      <div class="submitBtn"><button type="submit">Add Trip</button>
     </form>
   <% } %>
 </main>

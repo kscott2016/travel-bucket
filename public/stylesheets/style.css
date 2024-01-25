@@ -207,10 +207,15 @@ div.tripStatusChange{
 
 }
 
-a.tripDetailsBtn, a.homeBtn{
+a.tripDetailsBtn{
   background-color:#ff9000;
   color: #000;
   text-decoration: none;
+  padding:10px;
+}
+
+a.homeBtn{
+
   padding:10px 20px;
 }
 

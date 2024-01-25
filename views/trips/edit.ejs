@@ -4,6 +4,8 @@
 <main class="tripForm">
   <% if (user) { %>
   <h1>Edit <%= trip.name %></h1>
+  <div class="seperator"></div>
+  
     <form id="trip-form" action="/trips/<%= trip._id %>?_method=PUT" method="POST">
       <div class="formRow">
         <div class="formItem">
@@ -30,7 +32,9 @@
           <input type="text" id="tripImg" name="imgUrl" value="<%= trip.imgUrl%>">
         </div>
       </div>
+      <div class="submitBtn">
       <button type="submit">Update Trip</button>
+      </div>
     </form>
   <% } %>
 </main>
