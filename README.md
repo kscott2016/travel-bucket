@@ -9,7 +9,7 @@ With this app you'll be able to create multiple trips that lists your desired ci
 
 ![game-screenshot](https://github.com/kscott2016/travel-bucket/blob/main/public/media/screenshot2.png?raw=true)
 
-<a href="https://travel-bucket.fly.dev/">visit the app here </a>
+## <a href="https://travel-bucket.fly.dev/">Visit the app here </a> 💫
 
 ## Planning Materials 📋
 <ul>
