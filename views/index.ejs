@@ -57,7 +57,7 @@
           get reviewContent() {
               return this.review
           }
-       
+      
           set reviewContent(x) {
               this.review = x
           }
@@ -65,7 +65,7 @@
           get numOfStars() {
               return this.stars
           }
-       
+      
           set numOfStars(x) {
               this.stars = x
           }
@@ -73,22 +73,19 @@
           get revName() {
               return this.name
           }
-       
+      
           set revName(x) {
               this.name = x
           }
       }
-      
       let review1= new Reviews("Using this app helped me not kill my friends while planning!",5,"Carmen San Diego")
-  
-      let review2= new Reviews("Using this app helped me discover all kinds of things during my trips!",4, "Indiana Jones")
-  
-      let review3= new Reviews("Such a time saver!",4, "Captain Jack Sparrow")
-  
-      let listOfReviews=[review1,review2,review3]
-      
-      %>
 
+      let review2= new Reviews("Using this app helped me discover all kinds of things during my trips!",4, "Indiana Jones")
+
+      let review3= new Reviews("Such a time saver!",4, "Captain Jack Sparrow")
+
+      let listOfReviews=[review1,review2,review3]
+      %>
         <div class="reviewsArea">
           <% listOfReviews.forEach(review => { %>
             <div class="reviewCard">
@@ -104,9 +101,6 @@
         </div>
     </div>
     </div>
-
- 
-
 </main>
 
 

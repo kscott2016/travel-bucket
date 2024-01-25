@@ -441,6 +441,10 @@ footer{
   }
 }
 
+a:link{
+  color:pink;
+}
+
 .footerLink:hover,
 .footerLink:hover>a,
 .footerLink:focus,
