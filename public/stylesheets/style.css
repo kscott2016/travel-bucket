@@ -96,6 +96,17 @@ div.welcomeMessage{
   width:60%;
 }
 
+div.reviewsArea{
+  width: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 30px auto;
+  background-color: #fff;
+  padding: 30px;
+  border: solid 2px rgb(255, 102, 0);
+}
+
 div.tripsContainer>ul{
   display:flex;
   flex-direction:row;
