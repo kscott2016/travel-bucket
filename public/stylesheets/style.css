@@ -381,6 +381,9 @@ div.activityCategory{
   color:#fff;
   padding: 20px 10px;
   gap:20px;
+  min-width: 80px;
+  width: auto;
+  max-width: 800px;
   p{
     margin:0;
     font-size:0.75em;

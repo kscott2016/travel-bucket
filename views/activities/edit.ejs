@@ -20,19 +20,21 @@
         <div class="formItem">
           <label for="activityType">What type of activity is this?</label>
           <select name="type" id="activityType" value="<%= activity.type %>">
+            <option value="adventure" <% if (activity.type==="adventure") { %> selected="<%= activity.name %>"
+              <% } %>>Adventure</option>
+            <option value="event" <% if (activity.type==="event") { %> selected="<%= activity.name %>"
+              <% } %>>Event</option>
+            <option value="leisure" <% if (activity.type==="leisure") { %> selected="<%= activity.name %>"
+                <% } %>>Leisure</option>
+            <option value="restaurant" <% if (activity.type==="restaurant") { %> selected="<%= activity.name %>"
+              <% } %>>Restaurant</option>
             <option value="tourism" <% if (activity.type==="tourism") { %> selected="<%= activity.name %>"
             <% } %>>
             Tourism</option>
-            <option value="event" <% if (activity.type==="event") { %> selected="<%= activity.name %>"
-              <% } %>>Event</option>
-            <option value="restaurant" <% if (activity.type==="restaurant") { %> selected="<%= activity.name %>"
-              <% } %>>Restaurant</option>
-            <option value="adventure" <% if (activity.type==="adventure") { %> selected="<%= activity.name %>"
-              <% } %>>Adventure</option>
           </select>
         </div>
         <div class="submitBtn">
-      <button type="submit">Add Activity</button>
+      <button type="submit">Update Activity</button>
       </div>
     </form>
   <% } %>
