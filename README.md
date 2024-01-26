@@ -3,7 +3,7 @@
 
 Interested in creating an easy a seamless method of planning your future trips? Spend more time enjoying your trips than thinking of things to do.
 
-With this app you'll be able to create multiple trips that lists your desired city and activities.
+With this app you'll be able to create multiple trips that lists your desired city and activities. This is a full CRUD application!
 
 ![game-screenshot](https://github.com/kscott2016/travel-bucket/blob/main/public/media/screenshot1.png?raw=true)
 
